@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicInterface</class>
+ <widget class="QMainWindow" name="MusicInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>706</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MusicInterface</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+background-color: rgb(251, 255, 167);
+border: 5px solid rgb(227, 123, 128);
+border-radius: 8px;
+}
+#lineEdit_searchBar
+{
+background-color: rgb(98, 150, 182);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 8px;
+}
+#lineEdit_searchBar:focus
+{
+background-color: rgb(22, 199, 193);
+}
+#graphicsView
+{
+background-color: rgb(98, 150, 182);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 8px;
+}
+#textEdit_lyrics
+{
+background-color: rgb(98, 150, 182);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 8px;
+}
+QPushButton
+{
+background-color: rgba(98, 150, 182, 150);
+/*
+border: 3px solid rgb(252,162,199);
+*/
+border-radius: 8px;
+}
+QTableWidget
+{
+background-color: rgba(0, 0, 0, 0);
+border: 0px;
+border-radius: 8px;
+}
+QTableView::item
+{
+selection-background-color: rgb(255, 153, 160);
+}
+
+#tab
+{
+background-color: rgba(98, 150, 182, 210);
+border: 3px solid rgb(252,162,199);
+border-radius: 8px;
+}
+
+#tab_2
+{
+background-color: rgba(98, 150, 182, 210);
+border: 3px solid rgb(252,162,199);
+border-radius: 8px;
+}
+#horizontalSlider_playProgress
+{
+background-color: rgb(98, 150, 182);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 13px;
+}
+#horizontalSlider_volumn
+{
+background-color: rgb(98, 150, 182);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 13px;
+}
+#label_endTime
+{
+background-color: rgb(255, 153, 160);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 12px;
+}
+#label_startTime
+{
+background-color: rgb(255, 153, 160);
+border: 3px solid rgb(240, 194, 197);
+border-radius: 12px;
+}
+
+QSlider::groove {
+    border: 0px solid #bbb;
+}
+ 
+QSlider::sub-page:horizontal {
+    
+	background: rgb(53, 56, 235);
+    border-radius: 2px;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+QSlider::add-page:horizontal {
+    background: rgb(255,255, 255);
+    border: 0px solid #777;
+    border-radius: 2px;
+    margin-top:9px;
+    margin-bottom:9px;
+}
+ 
+QSlider::handle:horizontal {
+    background: rgb(193,204,208);
+    width: 5px;
+    border: 1px solid rgb(193,204,208);
+    border-radius: 2px; 
+    margin-top:6px;
+    margin-bottom:6px;
+}
+ 
+QSlider::handle:horizontal:hover {
+    background: rgb(193,204,208);
+    width: 10px;
+    border: 1px solid rgb(193,204,208);       
+    border-radius: 5px; 
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+QTableView::item:!selected{
+    selection-background-color: rgb(255, 153, 160);
+}</string>
+  </property>
+  <property name="documentMode">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,17,3,3,1">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_searchBar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cascadia Mono</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="placeholderText">
+           <string>Search Music</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="font">
+           <font>
+            <family>Cascadia Mono</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTabBar::tab:first	
+{
+	background-color: rgb(131, 225, 186);
+	border: 2px solid rgb(252,162,199);
+  	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	font: 9pt &quot;Cascadia Mono&quot;;
+} 
+QTabBar::tab:last
+{
+	background-color: rgb(131, 225, 186);
+	border: 2px solid rgb(252,162,199);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	font: 9pt &quot;Cascadia Mono&quot;;
+}
+ 
+QTabBar::tab:selected
+{
+	background-color: rgb(55, 184, 147);
+}
+
+QTabBar::tab:hover
+{
+	background-color: rgb(205, 255, 233);
+}
+QScrollBar::handle:vertical        // 垂直滚动条 handle
+{
+    background: rgba(255,255,255,20%); // 垂直滚动条 handle 的背景色
+    border: 0px solid grey;            // 垂直滚动条 handle 边框
+    border-radius:3px;                 // 垂直滚动条 handle 圆角
+    width: 8px;                        // 垂直滚动条 handle 宽度
+}
+QScrollBar::vertical                    // 垂直滚动条 区域
+{
+    border-width:1px;                       // 垂直滚动条 区域 边框宽度
+    border-style: solid;                    // 垂直滚动条 区域 边框类型
+    border-color: rgba(255, 255, 255, 10%); // 垂直滚动条 区域 边框颜色
+    width: 8px;                             // 垂直滚动条 区域 宽度
+    margin:12px 12px 12px 12px;                 // 垂直滚动条 区域 margin
+    border-radius:3px;                      // 垂直滚动条 区域 圆角
+}
+
+
+ 
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="documentMode">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Online_Music</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_musicList">
+              <property name="font">
+               <font>
+                <family>Cascadia Mono</family>
+                <pointsize>9</pointsize>
+                <italic>false</italic>
+               </font>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="autoScroll">
+               <bool>true</bool>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::NoPen</enum>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string>id</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>picid</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>music</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>artist</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>album</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Local_Music</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>60</number>
+          </property>
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_lastSong">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Last Song</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#pushButton_lastSong
+{
+image: url(:/new/prefix1/Image/back_hover.png);
+}
+
+#pushButton_lastSong:hover
+{
+	background-color: rgb(95, 177, 221);
+}
+
+#pushButton_lastSong:pressed
+{
+image: url(:/new/prefix1/Image/back.png);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_musicPlay">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Play</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#pushButton_musicPlay
+{
+border-image: url(:/new/prefix1/Image/play_hover.png);
+}
+
+#pushButton_musicPlay:hover
+{
+background-color: rgb(95, 177, 221);
+}
+
+#pushButton_musicPlay:pressed
+{
+border-image: url(:/new/prefix1/Image/play.png);
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_nextMusic">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Next Song</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#pushButton_nextMusic
+{
+border-image: url(:/new/prefix1/Image/next_hover.png);
+}
+
+#pushButton_nextMusic:hover
+{
+	background-color: rgb(95, 177, 221);
+}
+
+#pushButton_nextMusic:pressed
+{
+image: url(:/new/prefix1/Image/next.png);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_shuffle">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#pushButton_shuffle
+{
+border-image: url(:/new/prefix1/Image/queue_hover.png);
+}
+#pushButton_shuffle:hover
+{
+	background-color: rgb(95, 177, 221);
+}
+#pushButton_shuffle:pressed
+{
+border-image: url(:/new/prefix1/Image/queue.png);
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSlider" name="horizontalSlider_volumn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>1</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="toolTip">
+           <string>Volumn</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>30</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_startTime">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cascadia Mono</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>00:00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="horizontalSlider_playProgress">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Progress</string>
+            </property>
+            <property name="maximum">
+             <number>99</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_endTime">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cascadia Mono</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="text">
+             <string>00:00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <item>
+         <widget class="GraphicView" name="graphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_lyrics">
+          <property name="font">
+           <font>
+            <family>Cascadia Mono</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>706</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/new/prefix1/Image/music.ico</normaloff>
+     <normalon>:/new/prefix1/Image/music.ico</normalon>:/new/prefix1/Image/music.ico</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicView</class>
+   <extends>QGraphicsView</extends>
+   <header>GraphicView.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>lineEdit_searchBar</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tableWidget_musicList</tabstop>
+  <tabstop>pushButton_musicPlay</tabstop>
+  <tabstop>pushButton_nextMusic</tabstop>
+  <tabstop>pushButton_lastSong</tabstop>
+  <tabstop>pushButton_shuffle</tabstop>
+  <tabstop>horizontalSlider_volumn</tabstop>
+  <tabstop>horizontalSlider_playProgress</tabstop>
+  <tabstop>textEdit_lyrics</tabstop>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
