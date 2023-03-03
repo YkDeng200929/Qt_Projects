@@ -1,30 +1,30 @@
-# ¿ª·¢»·¾³: Windows
-# ¿ª·¢¹¤¾ß: 
+# å¼€å‘çŽ¯å¢ƒ: Windows
+# å¼€å‘å·¥å…·: 
 1. QT Creator v5.9.3
 2. [GetMan](https://getman.cn/)
-3. Chrome¿ª·¢Õß¹¤¾ß
-4. HIM NIS EditÓ¦ÓÃ³ÌÐò´ò°ü¹¤¾ß
+3. Chromeå¼€å‘è€…å·¥å…·
+4. HIM NIS Editåº”ç”¨ç¨‹åºæ‰“åŒ…å·¥å…·
 ---
-## [Cloud Music PlayerÏîÄ¿](./CloudMusic/)
-### ÃèÊö
-1. ÀûÓÃ QT Creator Éè¼ÆÍ¼ÐÎ»¯½çÃæ, Í¨¹ýä¯ÀÀÆ÷¿ª·¢Õß¹¤¾ß»ñÈ¡Ïà¹ØÒôÀÖÊý¾Ý²¢Í¨¹ý
-Get Man ½âÎö Json Êý¾Ý£¬×îÖÕÊµÏÖ²¥·ÅÇúÄ¿µÈ¹¦ÄÜ¡£
-2. ¿ÉÒÔÍ¨¹ýËÑË÷¸èÊÖ»òÇúÄ¿²¥·ÅÏà¹ØÒôÆµ
-3. ¿ÉÒÔÐý×ªÏÔÊ¾¸ÃÒôÀÖ¶ÔÓ¦µÄ×¨¼­·âÃæ
-4. ¿ÉÒÔ¹ö¶¯ÏÔÊ¾¸è´ÊÐÅÏ¢²¢¾ÓÖÐÏÔÊ¾ÕýÔÚ²¥·ÅµÄ¸è´Ê
-5. ÒÔÍ¨¹ý¶ÔÓ¦µÄ°´Å¥ÊµÏÖÉÏÏÂÇúÄ¿¼°Ëæ»úË³Ðò²¥·Å
-6. ¿ÉÒÔÍ¨¹ý¹ö¶¯Ìõµ÷ÕûÒôÀÖ²¥·ÅÊ±¼ä
-### ÀàÃèÊö
-1. MusicInterfaceÀà¸ºÔðÏÔÊ¾½çÃæÐ§¹û
-2. MusicPlayerÀà¸ºÔðÏÔÊ¾ÊµÊ±²¥·Å½ø¶ÈÌõ
-3. HttpHandleÀà¸ºÔð½øÐÐÍøÕ¾Êý¾Ý»ñÈ¡ºÍ½âÎö
-4. GraphicViewÀà¸ºÔð½âÎö×¨¼­·âÃæ
-5. DiskItem Óë DisPoinItem·Ö±ð¸ºÔðÕ¹Ê¾×¨¼­·âÃæµÄ¶¯»­ºÍ³ªÕëµÄ¶¯»­
-### Ð§¹ûÍ¼
-- ![play](../Qt_Projects/image/musicPlayer.png)
+## [Cloud Music Playeré¡¹ç›®](./CloudMusic/)
+### æè¿°
+1. åˆ©ç”¨ QT Creator è®¾è®¡å›¾å½¢åŒ–ç•Œé¢, é€šè¿‡æµè§ˆå™¨å¼€å‘è€…å·¥å…·èŽ·å–ç›¸å…³éŸ³ä¹æ•°æ®å¹¶é€šè¿‡
+Get Man è§£æž Json æ•°æ®ï¼Œæœ€ç»ˆå®žçŽ°æ’­æ”¾æ›²ç›®ç­‰åŠŸèƒ½ã€‚
+2. å¯ä»¥é€šè¿‡æœç´¢æ­Œæ‰‹æˆ–æ›²ç›®æ’­æ”¾ç›¸å…³éŸ³é¢‘
+3. å¯ä»¥æ—‹è½¬æ˜¾ç¤ºè¯¥éŸ³ä¹å¯¹åº”çš„ä¸“è¾‘å°é¢
+4. å¯ä»¥æ»šåŠ¨æ˜¾ç¤ºæ­Œè¯ä¿¡æ¯å¹¶å±…ä¸­æ˜¾ç¤ºæ­£åœ¨æ’­æ”¾çš„æ­Œè¯
+5. ä»¥é€šè¿‡å¯¹åº”çš„æŒ‰é’®å®žçŽ°ä¸Šä¸‹æ›²ç›®åŠéšæœºé¡ºåºæ’­æ”¾
+6. å¯ä»¥é€šè¿‡æ»šåŠ¨æ¡è°ƒæ•´éŸ³ä¹æ’­æ”¾æ—¶é—´
+### ç±»æè¿°
+1. MusicInterfaceç±»è´Ÿè´£æ˜¾ç¤ºç•Œé¢æ•ˆæžœ
+2. MusicPlayerç±»è´Ÿè´£æ˜¾ç¤ºå®žæ—¶æ’­æ”¾è¿›åº¦æ¡
+3. HttpHandleç±»è´Ÿè´£è¿›è¡Œç½‘ç«™æ•°æ®èŽ·å–å’Œè§£æž
+4. GraphicViewç±»è´Ÿè´£è§£æžä¸“è¾‘å°é¢
+5. DiskItem ä¸Ž DisPoinItemåˆ†åˆ«è´Ÿè´£å±•ç¤ºä¸“è¾‘å°é¢çš„åŠ¨ç”»å’Œå”±é’ˆçš„åŠ¨ç”»
+### æ•ˆæžœå›¾
+- ![play](./image/musicPlayer.png)
 ---
-## [ÌìÆøÔ¤±¨](./Weather/)
-### ÃèÊö
-- ½èÖúºÍ·çÌìÆøAPI»ñÈ¡ÌìÆøÊý¾Ý, Êý¾Ý¸ñÊ½ÎªJSON, ½âÎöºóÕ¹Ê¾¸øÓÃ»§
-### Ð§¹ûÍ¼
-- ![weather](../Qt_Projects/image/weather.png)
+## [å¤©æ°”é¢„æŠ¥](./Weather/)
+### æè¿°
+- å€ŸåŠ©å’Œé£Žå¤©æ°”APIèŽ·å–å¤©æ°”æ•°æ®, æ•°æ®æ ¼å¼ä¸ºJSON, è§£æžåŽå±•ç¤ºç»™ç”¨æˆ·
+### æ•ˆæžœå›¾
+- ![weather](./image/weather.png)
