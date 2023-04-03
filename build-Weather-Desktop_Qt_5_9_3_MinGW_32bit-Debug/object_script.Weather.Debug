@@ -1,0 +1,12 @@
+INPUT(
+./debug/main.o
+./debug/Weather.o
+./debug/HttpHandle.o
+./debug/Weather_Info.o
+./debug/Weather_Widget.o
+./debug/qrc_res.o
+./debug/moc_Weather.o
+./debug/moc_HttpHandle.o
+./debug/moc_Weather_Info.o
+./debug/moc_Weather_Widget.o
+);

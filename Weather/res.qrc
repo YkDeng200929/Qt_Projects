@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/bitbug_favicon.ico</file>
+        <file>Icon/cloud.png</file>
+        <file>weather_res/big_rain.png</file>
+        <file>weather_res/big_snow.png</file>
+        <file>weather_res/cloud.png</file>
+        <file>weather_res/cloud_sun.png</file>
+        <file>weather_res/fog.png</file>
+        <file>weather_res/moderate_snow.png</file>
+        <file>weather_res/rain_with_snow.png</file>
+        <file>weather_res/small_rain.png</file>
+        <file>weather_res/snow_rain.png</file>
+        <file>weather_res/thunder.png</file>
+        <file>weather_res/wind.png</file>
+    </qresource>
+</RCC>

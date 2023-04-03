@@ -1,0 +1,12 @@
+INPUT(
+./release/main.o
+./release/Weather.o
+./release/HttpHandle.o
+./release/Weather_Info.o
+./release/Weather_Widget.o
+./release/qrc_res.o
+./release/moc_Weather.o
+./release/moc_HttpHandle.o
+./release/moc_Weather_Info.o
+./release/moc_Weather_Widget.o
+);

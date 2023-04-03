@@ -27,15 +27,21 @@ RC_ICONS = bitbug_favicon.ico
 SOURCES += \
         main.cpp \
         Weather.cpp \
-    HttpHandle.cpp
+    HttpHandle.cpp \
+    Weather_Info.cpp \
+    Weather_Widget.cpp
 
 HEADERS += \
         Weather.hpp \
-    HttpHandle.hpp
+    HttpHandle.hpp \
+    Weather_Info.hpp \
+    Weather_Widget.hpp
 
 FORMS += \
-        Weather.ui
+        Weather.ui \
+    Weather_Info.ui \
+    Weather_Widget.ui
 
 RESOURCES += \
-    image.qrc
+    res.qrc
 
