@@ -14,6 +14,7 @@ enum {
 };
 
 const QString week[] = {
+    ""
     "星期一",
     "星期二",
     "星期三",

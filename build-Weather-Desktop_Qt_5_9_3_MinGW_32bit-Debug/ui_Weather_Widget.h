@@ -36,7 +36,7 @@ public:
     {
         if (Weather_Widget->objectName().isEmpty())
             Weather_Widget->setObjectName(QStringLiteral("Weather_Widget"));
-        Weather_Widget->resize(146, 308);
+        Weather_Widget->resize(146, 315);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
